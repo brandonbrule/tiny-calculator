@@ -99,10 +99,11 @@
 
       '.its-calc[data-calc-dragging="true"]{',
       'cursor:pointer',
-      '}',
-      
-      'body[data-calc-dragging="true"] .its-calc{',
       'background:rgba(0,0,0,0.85);',
+      '}',
+
+      '.its-calc *{',
+      'box-sizing: border-box',
       '}',
 
       '.its-calc button:focus,',
