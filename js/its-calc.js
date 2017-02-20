@@ -110,11 +110,12 @@
       '}',
 
       '.its-calc input{',
-      'font-size:24px;',
+      'font-size:30px;',
       'font-family:arial;',
       'background: none;',
       'border:none;',
       'width: 200px;',
+      'height: 40px;',
       'color:#fff;',
       'padding-left:0.5em;',
       '}',
