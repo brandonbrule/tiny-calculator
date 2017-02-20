@@ -87,9 +87,6 @@
   var createCalculatorUI = function() {
     var html = [
       '<style>',
-      'body[data-calc-dragging="true"]{',
-      'cursor:pointer',
-      '}',
       '.its-calc{',
       'background:rgba(0,0,0,0.95);',
       'position:fixed;',
@@ -98,6 +95,10 @@
       'width: 530px;',
       'border-radius:6px;',
       'padding-right: 10px;',
+      '}',
+
+      '.its-calc[data-calc-dragging="true"]{',
+      'cursor:pointer',
       '}',
       
       'body[data-calc-dragging="true"] .its-calc{',
@@ -236,7 +237,7 @@
 
     // Dragging (Stop Dragging Timer)
     Draggable.dragging = false;
-    document.body.setAttribute('data-calc-dragging', false);
+    container.setAttribute('data-calc-dragging', false);
     clearInterval(interval);
 
   });
@@ -314,7 +315,7 @@
     if (el.id === 'its-calc') {
       Draggable.dragging = true;
       Draggable.update(e);
-      document.body.setAttribute('data-calc-dragging', true);
+      container.setAttribute('data-calc-dragging', true);
       interval = setInterval(function() {
         Draggable.checkCollision();
       }, 10);
