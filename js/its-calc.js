@@ -130,6 +130,7 @@
       'font-size:30px;',
       'padding: 0;',
       'margin: 0;',
+      'vertical-align: top;',
       'font-family:arial;',
       'border-radius: 0;',
       'background:#5f5f5f;',
