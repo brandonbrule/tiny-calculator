@@ -200,6 +200,12 @@
     document.body.appendChild(ui);
   };
 
+  var removeActiveStyle = function(){
+    if (container.querySelector('button[data-active="true"]')) {
+      container.querySelector('button[data-active="true"]').removeAttribute('data-active');
+    }
+  };
+
   
 
   // On Release
@@ -219,21 +225,23 @@
         switch (calc_action) {
           case 'add':
             t = t + cur_bal;
+            total_display.value = t;
             break;
           case 'subtract':
             t = cur_bal - t;
+            total_display.value = t;
             break;
           case 'multiply':
             t = cur_bal * t;
+            total_display.value = t;
             break;
           case 'divide':
             t = cur_bal / t;
+            total_display.value = t;
             break;
           default:
             break;
         }
-
-        total_display.value = t;
       }
 
     }
@@ -267,6 +275,11 @@
     // Calculator Controls
     if (el.hasAttribute('its-calc')) {
       var action = el.getAttribute('its-calc');
+
+      if (el.nodeName === 'INPUT'){
+        removeActiveStyle();
+        calc_action = null;
+      }
       
 
       // Highlight Buttons
@@ -274,9 +287,8 @@
         
         // First Remove the Active Style if there, and then re-apply active class
         // To button clicked.
-        if (container.querySelector('button[data-active="true"]')) {
-          container.querySelector('button[data-active="true"]').removeAttribute('data-active');
-        }
+        removeActiveStyle();
+        
         // Don't set active style for submit or clear
         if (
           el.getAttribute('its-calc') !== 'submit' &&
