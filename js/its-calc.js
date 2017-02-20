@@ -74,10 +74,10 @@
       }
 
       if (!Draggable.collision.x){
-        container.style.left = Draggable.container.pos.left + 'px';
+        container.style.left = (Draggable.container.pos.left) + 5 + 'px';
       }
       if (!Draggable.collision.y){
-        container.style.top = Draggable.mouse.y + 'px';
+        container.style.top = (Draggable.mouse.y - 5) + 'px';
       }
     }
   };
