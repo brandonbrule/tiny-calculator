@@ -275,6 +275,12 @@
     // Calculator Controls
     if (el.hasAttribute('its-calc')) {
       var action = el.getAttribute('its-calc');
+      
+      // Set global calc_action state (add, subtract, divide, multiply)
+      calc_action = action;
+      if(total_display.value.length === 0){
+        total_display.value = 0;
+      }
 
       if (el.nodeName === 'INPUT'){
         removeActiveStyle();
@@ -322,8 +328,7 @@
         window.getSelection().removeAllRanges();
       }
       
-      // Set global calc_action state (add, subtract, divide, multiply)
-      calc_action = action;
+
     }
 
     // Start Dragging if the mouse down is on its-calc container
