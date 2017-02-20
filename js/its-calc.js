@@ -135,6 +135,7 @@
       'border-radius: 0;',
       'background:#5f5f5f;',
       'border: none;',
+      'line-height: 1',
       'border-right: 1px solid #484848;',
       'color:#fff;',
       'width:40px;',
