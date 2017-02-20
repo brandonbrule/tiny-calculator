@@ -114,7 +114,7 @@
       'font-family:arial, helvetica;',
       'background: none;',
       'border:none;',
-      'width: 225px;',
+      'width: 215px;',
       'height: 40px;',
       'color:#fff;',
       'padding-left:10px;',
@@ -125,8 +125,11 @@
       '}',
 
       '.its-calc button[its-calc]{',
-      'font-size:1.2em;',
+      'font-size:30px;',
+      'padding: 0;',
+      'margin: 0;',
       'font-family:arial;',
+      'border-radius: 0;',
       'background:#5f5f5f;',
       'border: none;',
       'border-right: 1px solid #484848;',
@@ -170,6 +173,7 @@
 
       '.its-calc .its-calc-submit-container{',
       'float:right;',
+      'width: 135px;',
       'padding: 7px 0 0 0;',
       'margin-right: 10px;',
       '}',
@@ -340,9 +344,7 @@
 
 
   // Setup Default Values.
-  window.addEventListener('load', function(e){
-
-    // Setup Calculator Values
+  // Setup Calculator Values
     createCalculatorUI();
     container = document.getElementById('its-calc');
     total_display = container.querySelector('input[its-calc="total"]');
@@ -355,6 +357,5 @@
     Draggable.container.offset.y = Draggable.window.height - Draggable.container.height;
     Draggable.container.pos.left = 0;
     Draggable.container.pos.top = 0;
-  });
 
 }());
