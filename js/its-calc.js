@@ -93,7 +93,7 @@
       '.its-calc{',
       'background:rgba(0,0,0,0.95);',
       'position:fixed;',
-      'top:5px;',
+      'top:13px;',
       'z-index:100;',
       'width: 530px;',
       'border-radius:6px;',
