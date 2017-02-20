@@ -1,4 +1,3 @@
-its.collapsed = false;
 (function() {
   var calc_array = [];
   var event_data = {};
