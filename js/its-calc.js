@@ -116,7 +116,7 @@
       'font-family:arial, helvetica;',
       'background: none;',
       'border:none;',
-      'width: 215px;',
+      'width: 214px;',
       'height: 40px;',
       'color:#fff;',
       'padding-left:10px;',
@@ -175,7 +175,7 @@
 
       '.its-calc .its-calc-submit-container{',
       'float:right;',
-      'width: 135px;',
+      'width: 136px;',
       'padding: 7px 0 0 0;',
       'margin-right: 10px;',
       '}',
