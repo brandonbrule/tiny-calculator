@@ -244,10 +244,21 @@
     var el = e.target;
     var val;
 
+
+    // If it's on the svg part of the button.
+    if (el.nodeName === 'svg'){
+      el = el.parentNode;
+    }
+
+    if (el.nodeName === 'path'){
+      el = el.parentNode.parentNode.parentNode;
+    }
+
     // Calculator Controls
     if (el.hasAttribute('its-calc')) {
       var action = el.getAttribute('its-calc');
       
+
       // Highlight Buttons
       if (el.nodeName === 'BUTTON') {
         
