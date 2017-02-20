@@ -308,6 +308,7 @@
     // Start Dragging if the mouse down is on its-calc container
     if (el.id === 'its-calc') {
       Draggable.dragging = true;
+      Draggable.update(e);
       document.body.setAttribute('data-calc-dragging', true);
       interval = setInterval(function() {
         Draggable.checkCollision();
