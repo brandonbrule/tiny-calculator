@@ -110,7 +110,7 @@
       '}',
 
       '.its-calc input{',
-      'font-size:18px;',
+      'font-size:24px;',
       'font-family:arial;',
       'background: none;',
       'border:none;',
