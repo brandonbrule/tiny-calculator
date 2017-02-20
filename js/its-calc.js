@@ -169,7 +169,7 @@
 
       '.its-calc .its-calc-submit-container{',
       'float:right;',
-      'padding: 7px;',
+      'padding: 7px 0 0 0;',
       'margin-right: 10px;',
       '}',
       '</style>',
