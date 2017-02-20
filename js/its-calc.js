@@ -193,6 +193,7 @@
 
   
 
+  // On Release
   // Double Click but not really
   // It just checks to see if there's selected text on mouse up or ||
   // If it's one of the calculator buttons
@@ -236,8 +237,8 @@
   });
   
   
-
-  // Calculations
+  
+  // On Click Down (Hold Mouse, Movement)
   // If Submit, Clear, And Start Moving Container on Mouse Down
   // Also Highlight Buttons
   document.body.addEventListener('mousedown', function(e) {
