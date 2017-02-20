@@ -114,7 +114,7 @@
       'font-family:arial;',
       'background: none;',
       'border:none;',
-      'width: 200px;',
+      'width: 225px;',
       'height: 40px;',
       'color:#fff;',
       'padding-left:0.5em;',
