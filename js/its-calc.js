@@ -94,7 +94,7 @@
       'background:rgba(0,0,0,0.95);',
       'position:fixed;',
       'top:13px;',
-      'z-index:100;',
+      'z-index:10000;',
       'width: 530px;',
       'border-radius:6px;',
       'padding-right: 10px;',
