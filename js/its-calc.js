@@ -60,7 +60,7 @@
         this.collision.x = true;
       }
 
-      if (this.container.pos.right > this.window.width){
+      if (this.container.pos.right + 20 > this.window.width){
         this.collision.x = true;
         
       }
