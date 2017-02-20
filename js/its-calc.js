@@ -98,7 +98,7 @@
       '}',
 
       '.its-calc[data-calc-dragging="true"]{',
-      'cursor:pointer',
+      'cursor:pointer;',
       'background:rgba(0,0,0,0.85);',
       '}',
 
