@@ -111,13 +111,13 @@
 
       '.its-calc input{',
       'font-size:30px;',
-      'font-family:arial;',
+      'font-family:arial, helvetica;',
       'background: none;',
       'border:none;',
       'width: 225px;',
       'height: 40px;',
       'color:#fff;',
-      'padding-left:0.5em;',
+      'padding-left:10px;',
       '}',
 
       '.its-calc input::selection{',
