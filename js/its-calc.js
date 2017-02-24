@@ -205,17 +205,25 @@
       container.querySelector('button[data-active="true"]').removeAttribute('data-active');
     }
   };
-    
-  // Toggle hide/show -AAF
+  
+  // KeyPress Actions
+  // Esc Toggle hide/show -AAF
+  // Enter to Calculate
   document.addEventListener('keydown', function(e) {
       var element = e.target;
-      // Make sure the container is defined -AAF
-      if (container) {
-         // Capure the key ESC
+
+         // Esc to Hide and Show Calculator
           if (e.keyCode && e.keyCode === 27) {
               container.style.zIndex = '-1';
           }
-      }
+
+          // Enter to Eval Input
+          if (e.keyCode && e.keyCode === 13) {
+            val = eval(total_display.value);
+            total_display.value = val;
+            hidden_display.value = val;
+            window.getSelection().removeAllRanges();
+          }
   });
 
   
