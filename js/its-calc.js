@@ -228,7 +228,10 @@
 
         // ESC To Toggle Calculator
         case 27:
+
           if(container.style.display !== 'none'){
+            calc_action = null;
+            removeActiveStyle();
             container.style.display = 'none';
           }else {
             container.style.display = 'block';
