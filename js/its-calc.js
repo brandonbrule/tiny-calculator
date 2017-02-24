@@ -411,20 +411,25 @@
   });
 
 
-
+  // Load
   // Setup Default Values.
   // Setup Calculator Values
-    createCalculatorUI();
-    container = document.getElementById('its-calc');
-    total_display = container.querySelector('input[its-calc="total"]');
-    hidden_display = container.querySelector('input[its-calc="hidden"]');
+  window.addEventListener("load", function(){
+    if(!container){
+      createCalculatorUI();
+      container = document.getElementById('its-calc');
+      total_display = container.querySelector('input[its-calc="total"]');
+      hidden_display = container.querySelector('input[its-calc="hidden"]');
 
-    // Update Draggable Container Positions
-    Draggable.container.width = container.offsetWidth;
-    Draggable.container.height = container.offsetHeight;
-    Draggable.container.offset.x = Draggable.window.width - Draggable.container.width;
-    Draggable.container.offset.y = Draggable.window.height - Draggable.container.height;
-    Draggable.container.pos.left = 0;
-    Draggable.container.pos.top = 0;
+      // Update Draggable Container Positions
+      Draggable.container.width = container.offsetWidth;
+      Draggable.container.height = container.offsetHeight;
+      Draggable.container.offset.x = Draggable.window.width - Draggable.container.width;
+      Draggable.container.offset.y = Draggable.window.height - Draggable.container.height;
+      Draggable.container.pos.left = 0;
+      Draggable.container.pos.top = 0;
+    }
+  });
+
 
 }());
