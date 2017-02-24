@@ -205,6 +205,19 @@
       container.querySelector('button[data-active="true"]').removeAttribute('data-active');
     }
   };
+    
+  // Toggle hide/show -AAF
+  document.addEventListener('keydown', function(e) {
+      var element = e.target;
+      // Make sure the container is defined -AAF
+      if (container) {
+         // Capure the key ESC
+          if (e.keyCode && e.keyCode === 27) {
+              // Apparently not supported in IE6, but well \_(ツ)_/
+              container.hidden = !container.hidden;
+          }
+      }
+  });
 
   
 
@@ -217,7 +230,8 @@
     var cur_bal = parseFloat(total_display.value);
     
     // If Selected text or if its one of the calculator buttons.
-    if (t && e.target.getAttribute('its-calc') !== 'total') {
+    // Also, make sure the container is displayed (I used === false just to be sure) -AAF
+    if (t && e.target.getAttribute('its-calc') !== 'total' && container.hidden === false) {
       hidden_display.value = t;
       t = hidden_display.value.replace(/,/g, '');
       if (parseFloat(t)) {
