@@ -232,11 +232,12 @@
           if(container.style.display !== 'none'){
             calc_action = null;
             removeActiveStyle();
-            window.getSelection().removeAllRanges();
             container.style.display = 'none';
           }else {
             container.style.display = 'block';
           }
+          
+          window.getSelection().removeAllRanges();
           break;
 
         // Enter to Eval Input
