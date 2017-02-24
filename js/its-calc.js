@@ -213,8 +213,7 @@
       if (container) {
          // Capure the key ESC
           if (e.keyCode && e.keyCode === 27) {
-              // Apparently not supported in IE6, but well \_(ツ)_/
-              container.hidden = !container.hidden;
+              container.style.zIndex = '-1';
           }
       }
   });
