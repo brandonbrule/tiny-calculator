@@ -200,6 +200,17 @@
     document.body.appendChild(ui);
   };
 
+
+  // Toggle Element Visibility Display
+  var toggleDisplay = function(element){
+    if(element.style.display !== 'none'){
+      container.style.display = 'none';
+    }else {
+      container.style.display = 'block';
+    }
+  }
+
+  // Look for active buttons in calculator and remove that active attribute.
   var removeActiveStyle = function(){
     if (container.querySelector('button[data-active="true"]')) {
       container.querySelector('button[data-active="true"]').removeAttribute('data-active');
@@ -211,19 +222,32 @@
   // Enter to Calculate
   document.addEventListener('keydown', function(e) {
       var element = e.target;
+      var key = e.keyCode;
 
-         // Esc to Hide and Show Calculator
-          if (e.keyCode && e.keyCode === 27) {
-              container.style.zIndex = '-1';
-          }
+      switch(key) {
 
-          // Enter to Eval Input
-          if (e.keyCode && e.keyCode === 13) {
-            val = eval(total_display.value);
-            total_display.value = val;
-            hidden_display.value = val;
-            window.getSelection().removeAllRanges();
+        // ESC To Toggle Calculator
+        case 27:
+          if(container.style.display !== 'none'){
+            container.style.display = 'none';
+          }else {
+            container.style.display = 'block';
           }
+          break;
+
+        // Enter to Eval Input
+        case 13:
+          val = eval(total_display.value);
+          total_display.value = val;
+          hidden_display.value = val;
+          window.getSelection().removeAllRanges();
+          break;
+
+        // Do nothing for all other keypresses.  
+        default:
+        return;
+      }
+    
   });
 
   
