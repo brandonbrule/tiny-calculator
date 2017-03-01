@@ -418,7 +418,7 @@
   // Load
   // Setup Default Values.
   // Setup Calculator Values
-  window.addEventListener("load", function(){
+
     if(!container){
       createCalculatorUI();
       container = document.getElementById('its-calc');
@@ -433,7 +433,7 @@
       Draggable.container.pos.left = 0;
       Draggable.container.pos.top = 0;
     }
-  });
+
 
 
 }());
