@@ -263,7 +263,9 @@
   // If it's one of the calculator buttons
   document.addEventListener('mouseup', function(e) {
     var t = (document.all) ? document.selection.createRange().text : document.getSelection();
-    var cur_bal = parseFloat(total_display.value);
+    if(total_display){
+      var cur_bal = parseFloat(total_display.value);
+    }
     
     // If Selected text or if its one of the calculator buttons.
     // Also, make sure the container is displayed (I used === false just to be sure) -AAF
