@@ -419,7 +419,7 @@
   // Setup Default Values.
   // Setup Calculator Values
 
-    if(!container){
+    if(!document.getElementById('its-calc')){
       createCalculatorUI();
       container = document.getElementById('its-calc');
       total_display = container.querySelector('input[its-calc="total"]');
