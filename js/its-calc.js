@@ -1,4 +1,7 @@
 (function() {
+
+  if(!document.getElementById('its-calc')){
+
   var calc_array = [];
   var event_data = {};
   var total_display;
@@ -418,8 +421,7 @@
   // Load
   // Setup Default Values.
   // Setup Calculator Values
-
-    if(!document.getElementById('its-calc')){
+    
       createCalculatorUI();
       container = document.getElementById('its-calc');
       total_display = container.querySelector('input[its-calc="total"]');
@@ -433,7 +435,4 @@
       Draggable.container.pos.left = 0;
       Draggable.container.pos.top = 0;
     }
-
-
-
 }());
